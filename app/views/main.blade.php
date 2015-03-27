@@ -39,6 +39,10 @@
 
 		</a>
 		<h1>Main Page</h1>
+		
+		<?php
+			echo 'test';
+		?>
 	</div>
 </body>
 </html>

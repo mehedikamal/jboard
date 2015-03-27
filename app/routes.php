@@ -20,3 +20,13 @@ Route::get('/jobs/{id}', function()
 {
 	return View::make('main');
 });
+
+Route::get('/payment', function()
+{
+	return View::make('payment');
+});
+
+Route::get('/checkout', function()
+{
+	return View::make('checkout');
+});

@@ -4,8 +4,7 @@
 			<h1>Just a heading</h1>
 			<p class="lead">Gimmicky marketing content</p>
 			<p>
-				<a class="btn btn-lg btn-default center-block" href="#" role="button">Post now for $100 <small>(30 days)</small></a>
-				<?php //echo link_to('#','Post now for $100'); ?>
+			  <?php echo HTML::decode(HTML::link('/create-posting','Post now for $100 <small>(30 days)</small>', array('class' => 'btn btn-lg btn-default center-block', 'role' => 'button'))); ?>
 			</p>
 			<div class="row marketing"></div>
 			<div class="row marketing">

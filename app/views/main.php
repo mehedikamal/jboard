@@ -1,11 +1,5 @@
 <?php include('includes/header.php'); ?>
 
-    <div class="header clearfix">
-			<h3 class="text-muted">
-				<?php echo HTML::image('images/noofficeneeded_logo.png'); ?>
-			</h3>
-		</div>
-
 		<div class="jumbotron">
 			<h1>Just a heading</h1>
 			<p class="lead">Gimmicky marketing content</p>

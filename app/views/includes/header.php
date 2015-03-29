@@ -18,3 +18,8 @@
 </head>
 <body>
   <div class="container">
+    <div class="header clearfix">
+      <h3 class="text-muted">
+        <?php echo HTML::image('images/noofficeneeded_logo.png'); ?>
+      </h3>
+    </div>

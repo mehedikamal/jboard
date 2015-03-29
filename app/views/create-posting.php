@@ -7,6 +7,13 @@
                  HTML::decode('<div class=\'col-sm-10\'>') .
                  Form::text('title', null, array('placeholder' => 'Job Title', 'class' => 'form-control')) .
                  HTML::decode('</div></div><div class=\'form-group\'>') .
+
+                 HTML::decode('<div class=\'form-group\'>') .
+                 Form::label('companyName', 'Company Name', array('class' => 'col-sm-2')) .
+                 HTML::decode('<div class=\'col-sm-10\'>') .
+                 Form::text('companyName', null, array('placeholder' => 'Company Name', 'class' => 'form-control')) .
+                 HTML::decode('</div></div><div class=\'form-group\'>') .
+
                  Form::label('category', 'Category', array('class' => 'col-sm-2')) .
                  HTML::decode('<div class=\'col-sm-3\'>') .
                  HTML::decode(Form::label('front-end developer', '<input type=\'radio\' name=\'front-end developer\'/> Front-end Developer')) .

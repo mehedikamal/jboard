@@ -1,14 +1,21 @@
 <?php include('includes/header.php'); ?>
 
-	<div class="welcome">
-		<a href="http://laravel.com" title="Laravel PHP Framework">
+    <div class="header clearfix">
+			<h3 class="text-muted">
+				<?php echo HTML::image('images/noofficeneeded_logo.png'); ?>
+			</h3>
+		</div>
 
-		</a>
-		<h1>Main Page</h1>
+		<div class="jumbotron">
+			<h1>Just a heading</h1>
+			<p class="lead">Gimmicky marketing content</p>
+			<p><a class="btn btn-lg btn-default" href="#" role="button">Post now for $100 <small>(30 days)</small></a></p>
+		</div>
 
-		<?php
-			echo 'test';
-		?>
-	</div>
+		<div class="row marketing">
+			<div class="col-lg-12">
+				<p class="text-center">Jobs postings go here</p>
+			</div>
+		</div>
 
 <?php include('includes/footer.php'); ?>

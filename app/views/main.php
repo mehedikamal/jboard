@@ -1,4 +1,6 @@
-<!doctype html>
+<?php include('header.php'); ?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -39,7 +41,7 @@
 
 		</a>
 		<h1>Main Page</h1>
-		
+
 		<?php
 			echo 'test';
 		?>

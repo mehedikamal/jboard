@@ -30,3 +30,19 @@ Route::get('/payment', function() {
 Route::get('/checkout', function() {
 	return View::make('checkout');
 });
+
+Route::get('/categories', function() {
+    $categories = Categories::all();
+
+    foreach($categories as $category){
+        echo $category;
+    }
+
+});
+
+Route::get('/categories/{id}', function($id) {
+    $category = Categories::find($id);
+    
+    echo $category->title;
+
+});

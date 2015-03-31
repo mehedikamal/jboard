@@ -11,7 +11,7 @@ echo "\n\nGet Composer Dependencies\n\n";
 exec($command);
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {

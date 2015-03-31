@@ -30,7 +30,7 @@
 	}
 	
 	function CreateDatabase() {
-		mysql_connect('localhost', 'snatchapro', 'changeme');
+		mysql_connect('localhost', 'root', '');
 		mysql_query('CREATE DATABASE `noOfficeNeeded`') or die(mysql_error());
 		
 		exec('php artisan migrate');

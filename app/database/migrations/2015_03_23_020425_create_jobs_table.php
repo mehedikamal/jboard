@@ -23,6 +23,8 @@ class CreateJobsTable extends Migration {
 			$table->text('ApplyAt');
 			$table->text('description');
 			$table->boolean('isFeatured')->default(0);
+			$table->date('startAt');
+			$table->date('endAt');
 			$table->timestamps();
 		});
 	}

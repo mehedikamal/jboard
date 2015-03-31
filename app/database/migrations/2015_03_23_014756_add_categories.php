@@ -40,7 +40,7 @@ class AddCategories extends Migration {
 
 		DB::table('categories')->insert(array(
 
-			'title'=> 'Customer Support Jobs',
+			'title'=> 'Virtual Assistant Jobs',
 			'created_at'=>date('Y-m-d H:m:s'),
 			'updated_at'=>date('Y-m-d H:m:s')
 

@@ -21,7 +21,9 @@ class AddJobs extends Migration {
         	'applyAt'=>'Email jobs to at <a href="jobs@coxinc.com">jobs@coxinc.com</a>',
 			'description'=>'HTML5, CSS3, JavaScript',
 			'created_at'=>date('Y-m-d H:m:s'),
-			'updated_at'=>date('Y-m-d H:m:s')
+			'updated_at'=>date('Y-m-d H:m:s'),
+			'startAt'=>date('Y-m-d'),
+			'endAt'=>date('Y-m-d', strtotime("+60 days"))
 		));
 
 		DB::table('jobs')->insert(array(
@@ -32,8 +34,9 @@ class AddJobs extends Migration {
         	'applyAt'=>'Email jobs to at <a href="jobs@coxinc.com">jobs@coxinc.com</a>',
         	'description'=>'Got JSF?',
 			'created_at'=>date('Y-m-d H:m:s'),
-			'updated_at'=>date('Y-m-d H:m:s')
-
+			'updated_at'=>date('Y-m-d H:m:s'),
+			'startAt'=>date('Y-m-d'),
+			'endAt'=>date('Y-m-d', strtotime("+60 days"))
 			));
 
 		DB::table('jobs')->insert(array(
@@ -44,8 +47,9 @@ class AddJobs extends Migration {
         	'applyAt'=>'Email jobs to at <a href="jobs@coxinc.com">jobs@coxinc.com</a>',
         	'description'=>'Got JSF?',
 			'created_at'=>date('Y-m-d H:m:s'),
-			'updated_at'=>date('Y-m-d H:m:s')
-
+			'updated_at'=>date('Y-m-d H:m:s'),
+			'startAt'=>date('Y-m-d'),
+			'endAt'=>date('Y-m-d', strtotime("+60 days"))
 			));
 	}
 

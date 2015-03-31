@@ -42,7 +42,23 @@ Route::get('/categories', function() {
 
 Route::get('/categories/{id}', function($id) {
     $category = Categories::find($id);
-    
+
     echo $category->title;
+
+});
+
+Route::get('/jobs', function() {
+    $jobs = Jobs::all();
+
+    foreach($jobs as $job){
+        echo $job;
+    }
+
+});
+
+Route::get('/job/{id}', function($id) {
+    $job = Jobs::find($id);
+
+    echo $job->title;
 
 });

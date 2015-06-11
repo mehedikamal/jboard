@@ -3,13 +3,15 @@ var express = require('express'),
     mongoose = require('mongoose'),
     ejs = require('ejs').renderFile;
 
+var routes = require("./controllers/routes");
+
 app.engine('html', ejs)
 app.set('view engine', 'html')
 app.use(express.static('public'))
 
-app.get('/', function(req,res) {
-  res.render('home')
-})
+
+routes(app);
+
 
 
 var server = app.listen(3000, '127.0.0.1', function(){

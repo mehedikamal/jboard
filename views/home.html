@@ -1,1 +1,82 @@
-<p>Nothing to see</p>
+<%- include('./includes/header.html') %>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">About</a></li>
+        </ul>
+        <a href="#">
+          <img src="img/logo.png" alt="Post your job with No Office Needed" class="img-responsive">
+        </a>
+      </div>
+      <div class="jumbotron">
+        <h1>Find remote professionals</h1>
+        <p class="lead">Post a remote job, contract, or project opportunity. Click below to get started!</p>
+        <p>
+          <a class="btn btn-lg btn-success" href="#" role="button">Post now for $100 <small>(30 days)</small></a>
+        </p>
+      </div>
+
+      <h2>Programming</h2>
+      <div class='row marketing'>
+              <div class='col-lg-12 reg-job-container'>
+                <a href='#'>
+                  <strong>autonomy.com</strong>&nbsp;
+                  <span>PHP developer</span>
+                  <span><small>(Full-time)</small></span>
+                </a>
+                <span class='pull-right'>09/24/2014</span>
+              </div>
+            </div><div class='row marketing bg-warning sponsored'>
+              <div class='col-lg-12 reg-job-container'>
+              <i class='glyphicon glyphicon-star'></i> Featured -
+                <a href='#'>
+                  <strong>jobs.com</strong>&nbsp;
+                  <span>front-end engineer</span>
+                  <span><small>(Part-time)</small></span>
+                </a>
+                <span class='pull-right'>09/23/2014</span>
+              </div>
+            </div>
+      <h2>Design</h2>
+      <div class='row marketing'>
+              <div class='col-lg-12 reg-job-container'>
+                <a href='#'>
+                  <strong>graphixinteractive.com</strong>&nbsp;
+                  <span>Graphic Designer</span>
+                  <span><small>(Full-time)</small></span>
+                </a>
+                <span class='pull-right'>09/24/2014</span>
+              </div>
+            </div>
+      <h2>System Admin</h2>
+
+      <h2>Tech Support</h2>
+
+      <h2>Customer Service</h2>
+
+      <h2>Virtual Assistant</h2>
+
+
+      <div class="row alerts-container">
+        <div class="col-md-12">
+          <h3 class="text-center">Get email alerts when new opportunities are posted!</h3>
+          <form action="#" method="POST">
+            <label>Your email:</label>
+            <input type="text" class="form-control email-input" name="email" placeholder="Your email" required><br>
+            <label>Category:</label>
+            <select class="form-control category-input" name="category">
+              <option>Select One</option>
+              <option value="programming">Programming</option>
+              <option value="design">Design</option>
+              <option value="system_design">System Design</option>
+              <option value="tech_supprt">Tech Support</option>
+              <option value="customer_service">Customer Service</option>
+              <option value="virtual_assistant">Virtual Assistant</option>
+            </select><br>
+            <input type="submit" value="I want alerts!" class="btn btn-success alerts-button">
+          </form>
+        </div>
+      </div>
+
+<%- include('includes/footer.html') %>

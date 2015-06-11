@@ -13,4 +13,8 @@ module.exports = function(app) {
     res.render('create-posting')
   })
 
+  app.get('/payment', function(req,res) {
+    res.render('payment')
+  })
+
 }

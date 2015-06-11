@@ -17,4 +17,10 @@ module.exports = function(app) {
     res.render('payment')
   })
 
+
+
+  app.get('*', function(req,res) {
+    res.render('404')
+  });  //this route should ALWAYS be last
+
 }

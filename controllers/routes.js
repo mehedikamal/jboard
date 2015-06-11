@@ -9,4 +9,8 @@ module.exports = function(app) {
     res.render('about')
   })
 
+  app.get('/create-posting', function(req,res) {
+    res.render('create-posting')
+  })
+
 }

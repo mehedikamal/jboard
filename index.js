@@ -2,7 +2,7 @@ var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
     mongoose = require('mongoose'),
-    views = require('./views/views')
+    views = require('./views/views'),
     routes = require("./controllers/routes");
 
 var server = app.listen(port, function() {

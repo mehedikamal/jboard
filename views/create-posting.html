@@ -1,5 +1,14 @@
 <%- include('./includes/header.html') %>
 
-  <p class="text-center">Nothing to see here</p>
+  <form action="/charge" method="POST" class="text-center">
+    <script
+      src="https://checkout.stripe.com/checkout.js"
+      class="stripe-button"
+      data-key="pk_test_eNPrV4LFQKUIwL0rbAADF5oo"
+      data-name="No Office Needed"
+      data-description="30-day job posting"
+      data-amount="10000">
+    </script>
+  </form>
 
 <%- include('./includes/footer.html') %>

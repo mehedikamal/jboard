@@ -22,4 +22,14 @@ module.exports = function(app) {
 
   });
 
+  app.get('/payment', function(req,res) {
+    res.render('payment')
+  })
+
+
+
+  app.get('*', function(req,res) {
+    res.render('404')
+  });  //this route should ALWAYS be last
+
 }

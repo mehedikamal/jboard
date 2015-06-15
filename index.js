@@ -1,18 +1,13 @@
 var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
-    ejs = require('ejs').renderFile,
+    views = require('./views/views'),
     routes = require("./controllers/routes");
 
-app.engine('html', ejs)
-app.set('view engine', 'html')
-app.use(express.static('public'))
-
-routes(app);
-
 var server = app.listen(port, function() {
+  views(app,express)
+  routes(app)
   console.log('Your app has started at port ' + port)
 })
-
 
 module.exports = server

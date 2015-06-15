@@ -1,2 +1,2 @@
 
-exports.something = require("./routes");
+exports.categories = require("./categories");

@@ -1,3 +1,0 @@
-[submodule "node_modules/simple-stripe-checkout"]
-	path = node_modules/simple-stripe-checkout
-	url = git://github.com/sbrhutchens/simple-stripe-checkout.git

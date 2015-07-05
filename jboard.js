@@ -12,6 +12,10 @@ Router.route('/create-posting', function() {
   this.render('create-posting')
 })
 
+Router.route('/(.*)', function() {
+  this.render('404')
+})
+
 if (Meteor.isClient) {
   Template.condensedJobs.helpers({
     frontEndJobs: function() {
@@ -45,7 +49,7 @@ if (Meteor.isClient) {
       var formData = $('.create-posting-form').serializeArray();
 
       Posts.insert({
-        createdAt: new Date(),
+        createdAt: new Date().toLocaleDateString(),
         title: formData[0].value,
         description: formData[1].value,
         requirements: formData[2].value,

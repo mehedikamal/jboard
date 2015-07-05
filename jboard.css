@@ -59,6 +59,14 @@ label {
   border-bottom-right-radius: 0;
 }
 
+.panel-body h5 {
+  text-decoration: underline;
+}
+
+.panel-body mark {
+  font-style: italic;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

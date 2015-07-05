@@ -12,6 +12,14 @@ Router.route('/create-posting', function() {
   this.render('create-posting')
 })
 
+Router.route('/post/:_id', function() {
+  this.render('job-posting', {
+    data: function() {
+      return Posts.findOne({ _id: this.params._id})
+    }
+  })
+})
+
 Router.route('/(.*)', function() {
   this.render('404')
 })
@@ -58,7 +66,8 @@ if (Meteor.isClient) {
         category: formData[5].value,
         name: formData[6].value,
         headquarters: formData[7].value,
-        email: formData[8].value
+        email: formData[8].value,
+        website: formData[9].value
       })
 
       if (typeof formData !== undefined) {

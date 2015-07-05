@@ -1,0 +1,23 @@
+<template name="jobPosting">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4>{{name}} is looking for a {{title}} - {{salary}}</h4>
+      <small>Posted: {{createdAt}}</small>
+    </div>
+    <div class="panel-body">
+      <h5>Here's what the job is like:</h5>
+      <p>{{description}}</p>
+      <p><mark>The schedule is {{schedule}}</mark></p>
+      <h5>What you need to have:</h5>
+      <p>{{requirements}}</p>
+      <h5>About the company</h5>
+      <p>They're located in {{headquarters}} and you can visit their website
+        <a href="{{website}}" target="_blank">{{website}}</a> for more info
+      </p>
+      <h5>Where to apply</h5>
+      <p>Send your resume to {{email}}</p>
+
+    </div>
+  </div>
+
+</template>

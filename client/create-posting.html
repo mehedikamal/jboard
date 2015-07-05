@@ -1,0 +1,47 @@
+<template name="createPosting">
+  <h2 class="text-center">Creating a job posting is easy!</h2>
+  <form class="create-posting-form">
+    <input name="title" type="text" class="form-control" placeholder="Job Title" required /><br>
+    <textarea name="description" class="form-control" placeholder="Description" required></textarea><br>
+    <textarea name="requirements" class="form-control" placeholder="Requirements" required></textarea><br>
+    <select name="schedule" class="form-control">
+      <option value="part-time">Part-time</option>
+      <option value="full-time">Full-time</option>
+    </select><br>
+    <select name="salary" class="form-control">
+      <option value="$40k">$40k</option>
+      <option value="$50k">$50k</option>
+      <option value="$60k">$60k</option>
+      <option value="$70k">$70k</option>
+      <option value="$80k">$80k</option>
+      <option value="$90k">$90k</option>
+      <option value="$100k">$100k</option>
+      <option value="$110k">$110k</option>
+      <option value="$120k">$120k</option>
+      <option value="$130k">$130k</option>
+      <option value="$140k">$140k</option>
+      <option value="$150k">$150k</option>
+      <option value="$160k">$160k</option>
+      <option value="$170k">$170k</option>
+      <option value="$180k">$180k</option>
+    </select><br>
+    <select name="category" class="form-control">
+      <option value="front-end javascript">Front-end JavaScript</option>
+      <option value="back-end javascript">Back-end JavaScript</option>
+      <option value="isomorphic javascript">Isomorphic JavaScript</option>
+      <option value="miscellaneous">Miscellaneous</option>
+      <option value="design">Design</option>
+      <option value="sales/marketing">Sales/Marketing</option>
+      <option value="help desk/support">Help Desk/Support</option>
+      <option value="system admin">System Admin</option>
+    </select><br>
+    <input name="company" type="text" class="form-control" placeholder="Company Name"  required /><br>
+    <input name="headquarters" type="text" class="form-control" placeholder="Company Headquarters"  required /><br>
+    <input name="email" type="text" class="form-control" placeholder="Company Email"  required /><br>
+    <button class="btn btn-primary" type="submit">Post now!</button>
+  </form>
+  <div class="alert alert-success status-notification" role="alert">
+    <p>Your posting has been created!</p>
+  </div>
+  <a href="/">Return to homepage</a>
+</template>

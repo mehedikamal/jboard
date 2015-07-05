@@ -1,0 +1,62 @@
+<template name="condensedJobs">
+  <!-- use class alert alert-info for sponsored listings in future -->
+  <div class="col-lg-6">
+    <h2>Front-end JavaScript</h2>
+    <ul>
+      {{#each frontEndJobs}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>Back-end JavaScript</h2>
+    <ul>
+      {{#each backEndJobs}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>Isomorphic JavaScript</h2>
+    <ul>
+      {{#each isomorphic}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>Miscellaneous</h2>
+    <ul>
+      {{#each miscellaneous}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-lg-6">
+    <h2>Design</h2>
+    <ul>
+      {{#each design}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>Sales/Marketing</h2>
+    <ul>
+      {{#each salesMarketing}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>Help Desk/Support</h2>
+    <ul>
+      {{#each helpDesk}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+
+    <h2>System Admin</h2>
+    <ul>
+      {{#each systemAdmin}}
+        <li>{{title}} - {{category}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

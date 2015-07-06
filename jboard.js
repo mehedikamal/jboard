@@ -18,7 +18,7 @@ Router.route('/create-posting', function() {
   this.render('create-posting')
 })
 
-Router.route('/post/:_id', function() {
+Router.route('/:title/:_id', function() {
   this.render('job-posting', {
     data: function() {
       return Posts.findOne({ _id: this.params._id})
@@ -74,17 +74,6 @@ if (Meteor.isClient) {
       return Posts.find({ category: 'system_admin_jobs'}, {sort: {createdAt: -1}})
     }
   })
-
-  // Template.listByCategory.helpers({
-  //   jobs: function() {
-  //     return Posts.find({ category: 'miscellaneous'}, {sort: {createdAt: -1}})
-  //   },
-  //
-  //   category: function(){
-  //     return 'Design';
-  //   }
-  // })
-
 
   Template.createPosting.events({
     "submit .create-posting-form": function(e) {

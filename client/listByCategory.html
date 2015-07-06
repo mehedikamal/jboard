@@ -1,0 +1,12 @@
+<template name="listByCategory">
+
+    <h2>{{category}}</h2>
+    <ul class="list-group">
+      {{#each jobs}}
+        <li class="list-group-item">
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
+        </li>
+      {{/each}}
+    </ul>
+
+</template>

@@ -1,11 +1,17 @@
 Posts = new Mongo.Collection('jobs')
+Categories = new Mongo.Collection('categories')
 
 Router.configure({
   layoutTemplate: 'main'
 })
 
 Router.route('/', function() {
-  this.render('home')
+  this.render('home', {
+    data: function() {
+      pageTitle = 'hello world';
+      return pageTitle;
+    }
+  })
 })
 
 Router.route('/create-posting', function() {
@@ -20,6 +26,23 @@ Router.route('/post/:_id', function() {
   })
 })
 
+Router.route('/:_cat_id', function() {
+  this.render('listByCategory', {
+    data: function() {
+      var title = this.params._cat_id;
+      title = title.replace(/_/g, ' ');
+      title = title.charAt(0).toUpperCase() + title.substring(1);
+      var jobs = {
+                  jobs: Posts.find({ category: this.params._cat_id}),
+                  category: title
+                 };
+
+      return jobs;
+    }
+
+  });
+})
+
 Router.route('/(.*)', function() {
   this.render('404')
 })
@@ -27,30 +50,42 @@ Router.route('/(.*)', function() {
 if (Meteor.isClient) {
   Template.condensedJobs.helpers({
     frontEndJobs: function() {
-      return Posts.find({ category: 'front-end javascript'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'front_end_jobs'}, {sort: {createdAt: -1}})
     },
     backEndJobs: function() {
-      return Posts.find({ category: 'back-end javascript'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'back_end_jobs'}, {sort: {createdAt: -1}})
     },
     isomorphic: function() {
-      return Posts.find({ category: 'isomorphic javascript'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'fullstack_jobs'}, {sort: {createdAt: -1}})
     },
     miscellaneous: function() {
-      return Posts.find({ category: 'miscellaneous'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'miscellaneous_jobs'}, {sort: {createdAt: -1}})
     },
     design: function() {
-      return Posts.find({ category: 'design'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'design_jobs'}, {sort: {createdAt: -1}})
     },
     salesMarketing: function() {
-      return Posts.find({ category: 'sales/marketing'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'sales_marketing_jobs'}, {sort: {createdAt: -1}})
     },
     helpDesk: function() {
-      return Posts.find({ category: 'help desk/support'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'help_desk_support_jobs'}, {sort: {createdAt: -1}})
     },
     systemAdmin: function() {
-      return Posts.find({ category: 'system admin'}, {sort: {createdAt: -1}})
+      return Posts.find({ category: 'system_admin_jobs'}, {sort: {createdAt: -1}})
     }
   })
+
+  // Template.listByCategory.helpers({
+  //   jobs: function() {
+  //     return Posts.find({ category: 'miscellaneous'}, {sort: {createdAt: -1}})
+  //   },
+  //
+  //   category: function(){
+  //     return 'Design';
+  //   }
+  // })
+
+
   Template.createPosting.events({
     "submit .create-posting-form": function(e) {
       e.preventDefault();

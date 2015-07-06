@@ -1,12 +1,15 @@
 <template name="condensedJobs">
   <!-- use class active for sponsored listings in future -->
   <div class="col-lg-6">
-    <h2>Front-end JavaScript</h2>
+    <h2><a href="/front_end_jobs">Front-end JavaScript</a></h2>
     <ul class="list-group">
       {{#each frontEndJobs}}
+      <a href="/post/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}}
+
         </li>
+      </a>
       {{/each}}
     </ul>
 

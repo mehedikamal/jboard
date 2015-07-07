@@ -72,17 +72,19 @@ if (Meteor.isClient) {
     },
     systemAdmin: function() {
       return Posts.find({ category: 'system_admin_jobs'}, {sort: {createdAt: -1}})
-    }
+    },
+
   })
 
   Template.createPosting.events({
     "submit .create-posting-form": function(e) {
       e.preventDefault();
       var formData = $('.create-posting-form').serializeArray();
-
+      var urlTitle = formData[0].value.replace(/\s+/g, '-');
       Posts.insert({
         createdAt: new Date().toLocaleDateString(),
         title: formData[0].value,
+        urlTitle: urlTitle,
         description: formData[1].value,
         requirements: formData[2].value,
         schedule: formData[3].value,

@@ -16,27 +16,33 @@
     <h2>Back-end JavaScript</h2>
     <ul class="list-group">
       {{#each backEndJobs}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/{{title}}/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
 
     <h2>Isomorphic JavaScript</h2>
     <ul class="list-group">
       {{#each isomorphic}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
 
     <h2>Miscellaneous</h2>
     <ul class="list-group">
       {{#each miscellaneous}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
   </div>
@@ -45,36 +51,44 @@
     <h2>Design</h2>
     <ul class="list-group">
       {{#each design}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
 
     <h2>Sales/Marketing</h2>
     <ul class="list-group">
       {{#each salesMarketing}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
 
     <h2>Help Desk/Support</h2>
     <ul class="list-group">
       {{#each helpDesk}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
 
     <h2>System Admin</h2>
     <ul class="list-group">
       {{#each systemAdmin}}
+      <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
           <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | <a href="/post/{{_id}}">See more</a>
         </li>
+      </a>
       {{/each}}
     </ul>
   </div>

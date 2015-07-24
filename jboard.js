@@ -50,6 +50,14 @@ Router.route('/(.*)', function() {
 if (Meteor.isClient) {
   Template.condensedJobs.helpers({
     frontEndJobs: function() {
+      document.title = "Hello World";
+      var test = null;
+      Meteor.call("callHouse", "Blah", function(err, res){
+        console.log(res);
+        test = res;
+      });
+
+      console.log(test);
       return Posts.find({ category: 'front_end_jobs'}, {sort: {createdAt: -1}})
     },
     backEndJobs: function() {
@@ -81,20 +89,27 @@ if (Meteor.isClient) {
       e.preventDefault();
       var formData = $('.create-posting-form').serializeArray();
       var urlTitle = formData[0].value.replace(/\s+/g, '-');
-      Posts.insert({
-        createdAt: new Date().toLocaleDateString(),
-        title: formData[0].value,
-        urlTitle: urlTitle,
-        description: formData[1].value,
-        requirements: formData[2].value,
-        schedule: formData[3].value,
-        salary: formData[4].value,
-        category: formData[5].value,
-        name: formData[6].value,
-        headquarters: formData[7].value,
-        email: formData[8].value,
-        website: formData[9].value
-      })
+      var validated = false;
+
+      // validated = Meteor.call('testMe');
+      // console.log(validated);
+
+      var test = Meteor.call("callHouse");
+
+      // Posts.insert({
+      //   createdAt: new Date().toLocaleDateString(),
+      //   title: formData[0].value,
+      //   urlTitle: urlTitle,
+      //   description: formData[1].value,
+      //   requirements: formData[2].value,
+      //   schedule: formData[3].value,
+      //   salary: formData[4].value,
+      //   category: formData[5].value,
+      //   name: formData[6].value,
+      //   headquarters: formData[7].value,
+      //   email: formData[8].value,
+      //   website: formData[9].value
+      // })
 
       if (typeof formData !== undefined) {
         $('.status-notification').fadeIn();
@@ -111,5 +126,6 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    console.log('Server Started');
   });
 }

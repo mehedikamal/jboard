@@ -6,12 +6,7 @@ Router.configure({
 })
 
 Router.route('/', function() {
-  this.render('home', {
-    data: function() {
-      pageTitle = 'hello world';
-      return pageTitle;
-    }
-  });
+  this.render('home');
   fastRender: true
 })
 

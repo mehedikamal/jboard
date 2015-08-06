@@ -82,7 +82,7 @@ if (Meteor.isClient) {
       var formData = $('.create-posting-form').serializeArray();
       var urlTitle = formData[0].value.replace(/\s+/g, '-');
 
-      Meteor.call('createPosting', formData, urlTitle);
+      Meteor.call('createPreview', formData, urlTitle);
 
       if (typeof formData !== undefined) {
         $('.status-notification').fadeIn();

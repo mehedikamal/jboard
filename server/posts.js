@@ -1,6 +1,6 @@
 
 Meteor.methods({
-  createPosting: function(formData, urlTitle){
+  createPreview: function(formData, urlTitle){
     Posts.insert({
       createdAt: new Date().toLocaleDateString(),
       title: formData[0].value,
@@ -13,8 +13,19 @@ Meteor.methods({
       name: formData[6].value,
       headquarters: formData[7].value,
       email: formData[8].value,
-      website: formData[9].value
+      website: formData[9].value,
+      preview: true
+    }, function(err, result){
+      if(!err){
+        if(result){
+          createPosting(result);
+        }
+      }
     })
+  },
+
+  createPosting: function(){
+
   }
 });
 

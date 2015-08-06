@@ -16,7 +16,6 @@ Meteor.methods({
       website: formData[9].value
     })
   }
-
 });
 
 

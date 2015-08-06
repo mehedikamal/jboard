@@ -18,14 +18,16 @@ Meteor.methods({
     }, function(err, result){
       if(!err){
         if(result){
-          createPosting(result);
+          //Router.go('/post/'+result);
         }
       }
     })
   },
 
-  createPosting: function(){
-
+  createPosting: function(postID){
+      Posts.update(postID, {
+        $set: { preview: false }
+      });
   }
 });
 

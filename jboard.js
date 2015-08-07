@@ -17,8 +17,9 @@ Router.route('/create-posting', function() {
 Router.route('/:title/:_id', function() {
   this.render('job-posting', {
     data: function() {
-      document.title = "Kazi is the best!";
-      return Posts.findOne({ _id: this.params._id})
+      var post = Posts.findOne({ _id: this.params._id});
+      document.title = post.name +' - ' + post.title + " | noOfficeNeeded.com";
+      return post;
     }
   });
   fastRender: true;

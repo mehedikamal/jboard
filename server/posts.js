@@ -1,8 +1,8 @@
-
 Meteor.methods({
   createPreview: function(formData, urlTitle){
     Posts.insert({
       createdAt: new Date().toLocaleDateString(),
+      expiresAt: new Date().addDays(31).toLocaleDateString(), // Add 31 days from current date
       title: formData[0].value,
       urlTitle: urlTitle,
       description: formData[1].value,

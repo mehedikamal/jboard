@@ -47,7 +47,17 @@ Router.route('/(.*)', function() {
   this.render('404')
 })
 
+
 if (Meteor.isClient) {
+
+
+/* Global Date Format Helper */
+ Template.registerHelper('fmtDate', function(date) {
+   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+  return new Date(date).toLocaleDateString('en-us',options);
+});
+    
+  
   Template.condensedJobs.helpers({
     frontEndJobs: function() {
       document.title = "Hello World";
@@ -75,8 +85,9 @@ if (Meteor.isClient) {
       return Posts.find({ category: 'system_admin_jobs'}, {sort: {createdAt: -1}})
     },
 
-  })
-
+  });
+  
+  
   Template.createPosting.events({
     "submit .create-posting-form": function(e) {
       e.preventDefault();

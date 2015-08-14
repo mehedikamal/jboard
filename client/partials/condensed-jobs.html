@@ -6,7 +6,7 @@
       {{#each frontEndJobs}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}}
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}}
 
         </li>
       </a>
@@ -19,7 +19,7 @@
       {{#each backEndJobs}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}
@@ -31,7 +31,7 @@
       {{#each isomorphic}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}
@@ -43,7 +43,7 @@
       {{#each miscellaneous}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}
@@ -57,7 +57,7 @@
       {{#each design}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}
@@ -69,7 +69,7 @@
       {{#each salesMarketing}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}
@@ -81,7 +81,7 @@
       {{#each helpDesk}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}
@@ -93,7 +93,7 @@
       {{#each systemAdmin}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
         </li>
       </a>
       {{/each}}

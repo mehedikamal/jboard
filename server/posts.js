@@ -1,8 +1,8 @@
 Meteor.methods({
   createPreview: function(formData, urlTitle){
     Posts.insert({
-      createdAt: new Date().toLocaleDateString(),
-      expiresAt: new Date().addDays(31).toLocaleDateString(), // Add 31 days from current date
+      createdAt: new Date().getTime(), // Get current date and time in milliseconds since midnight January 1, 1970 UTC
+      expiresAt: new Date().setTime(new Date().getTime() + 2678400000), // Set date 31 days from now in milliseconds
       title: formData[0].value,
       urlTitle: urlTitle,
       description: formData[1].value,
@@ -33,5 +33,5 @@ Meteor.methods({
 
 
 Meteor.publish('getPosts' , function(){
-     return Posts.find();
+     return Posts.find({expiresAt: {$lte: new Date().getTime()}});
 });

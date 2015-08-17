@@ -33,5 +33,6 @@ Meteor.methods({
 
 
 Meteor.publish('getPosts' , function(){
-     return Posts.find({expiresAt: {$lte: new Date().getTime()}});
+     //return Posts.find({expiresAt: {$lte: new Date().getTime()}});
+     return Posts.find();
 });

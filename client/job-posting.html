@@ -1,5 +1,5 @@
 <template name="jobPosting">
-  <div class="panel panel-primary">
+  <!-- <div class="panel panel-primary">
     <div class="panel-heading">
       <h4>{{name}} is looking for a {{title}} : {{salary}}</h4>
       <small>Posted: {{fmtDate createdAt}}</small>
@@ -16,6 +16,41 @@
       </p>
       <h5>Where to apply</h5>
       <p>Send your resume to {{email}}</p>
+
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-md-9 block-section box-item-details">
+        {{# if sponsored}}
+        <div class="col-md-8">
+          <a href="#">
+            <img src="" alt="" />
+
+          </a>
+        </div>
+
+        <div class="col-md-4">
+          <p class="text-right">
+            <a href="#">Go to our website »</a>
+          </p>
+        </div>
+        {{/if}}
+
+        <h2 class="title">
+          {{title}} {{testMe.name}}
+        </h2>
+
+        <ul class="list-inline postBreadCrumb">
+              <li><i class="fa fa-briefcase"></i>{{schedule}}</li>
+              <li><i class="fa fa-map-marker"></i>{{headquarters}}</li>
+              <li><i class="fa fa-money"></i>{{salary}}</li>
+        </ul>
+
+        <div>{{description}}</div>
+
+        <h4>What we are looking for:</h4>
+        <p>{{requirements}}</p>
 
     </div>
   </div>

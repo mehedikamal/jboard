@@ -18,7 +18,7 @@ Router.route('/:title/:_id', function() {
   this.render('job-posting', {
     data: function() {
       var post = Posts.findOne({ _id: this.params._id});
-      document.title = post.name +' - ' + post.title + " | noOfficeNeeded.com";
+      //document.title = post.name +' - ' + post.title + " | noOfficeNeeded.com";
       return post;
     }
   });
@@ -56,8 +56,11 @@ if (Meteor.isClient) {
    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
   return new Date(date).toLocaleDateString('en-us',options);
 });
-    
-  
+
+Template.jobPosting.rendered = function(){
+
+}
+
   Template.condensedJobs.helpers({
     frontEndJobs: function() {
       document.title = "Hello World";
@@ -86,8 +89,8 @@ if (Meteor.isClient) {
     },
 
   });
-  
-  
+
+
   Template.createPosting.events({
     "submit .create-posting-form": function(e) {
       e.preventDefault();

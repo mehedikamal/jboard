@@ -1,7 +1,17 @@
+.boxShadow(@radius){
+  -webkit-border-radius: @radius !important;
+  -moz-border-radius: @radius !important;
+  -ms-border-radius: @radius !important;
+  -o-border-radius: @radius !important;
+  border-radius: @radius !important;
+}
+
+
 body {
-  font-family: 'fertigo', 'vollkorn';
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #f2f3f6;
 }
 
 textarea {
@@ -124,15 +134,10 @@ label {
 
 .postBreadCrumb{
   li{
-    -webkit-border-radius: 3px !important;
-  -moz-border-radius: 3px !important;
-  -ms-border-radius: 3px !important;
-  -o-border-radius: 3px !important;
-  border-radius: 3px !important;
   margin-bottom: 3px;
   border: 1px solid #e1e1e1;
   padding: 5px 20px;
-
+  .boxShadow(3px);
     i{
       margin-right: 3px;
     }

@@ -18,7 +18,6 @@ Router.route('/:title/:_id', function() {
   this.render('job-posting', {
     data: function() {
       var post = Posts.findOne({ _id: this.params._id});
-      //document.title = post.name +' - ' + post.title + " | noOfficeNeeded.com";
       return post;
     }
   });
@@ -57,10 +56,6 @@ if (Meteor.isClient) {
   return new Date(date).toLocaleDateString('en-us',options);
 });
 
-Template.jobPosting.rendered = function(){
-
-}
-
   Template.condensedJobs.helpers({
     frontEndJobs: function() {
       document.title = "Hello World";
@@ -94,8 +89,8 @@ Template.jobPosting.rendered = function(){
   Template.createPosting.events({
     "submit .create-posting-form": function(e) {
       e.preventDefault();
-      var formData = $('.create-posting-form').serializeArray();
-      var urlTitle = formData[0].value.replace(/\s+/g, '-');
+      var formData = $('.create-posting-form').serializeArray(),
+          urlTitle = formData[0].value.replace(/\s+/g, '-');
 
       Meteor.call('createPreview', formData, urlTitle);
 
@@ -104,16 +99,4 @@ Template.jobPosting.rendered = function(){
       }
     }
   })
-
-  Template.body.events({
-    // place your delegated events here
-
-  })
-}
-
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-    console.log('Server Started');
-  });
 }

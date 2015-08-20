@@ -20,7 +20,7 @@
     </div>
   </div> -->
 
-  <div class="row">
+  <div class="row postingWrapper">
     <div class="col-md-9 block-section box-item-details">
         {{# if sponsored}}
         <div class="col-md-8">
@@ -41,6 +41,8 @@
           {{title}} {{testMe.name}}
         </h2>
 
+        <p>{{name}} | <a href="{{website}}" target="_blank">{{website}}</a></p>
+
         <ul class="list-inline postBreadCrumb">
               <li><i class="fa fa-briefcase"></i>{{schedule}}</li>
               <li><i class="fa fa-map-marker"></i>{{headquarters}}</li>
@@ -51,6 +53,13 @@
 
         <h4>What we are looking for:</h4>
         <p>{{{requirements}}}</p>
+
+    </div>
+
+    <!--- Side Bar -->
+
+    <div class="col-md-3">
+      Hello World
 
     </div>
   </div>

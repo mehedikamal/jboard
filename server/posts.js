@@ -6,14 +6,13 @@ Meteor.methods({
       title: formData[0].value,
       urlTitle: urlTitle,
       description: formData[1].value,
-      requirements: formData[2].value,
-      schedule: formData[3].value,
-      salary: formData[4].value,
-      category: formData[5].value,
-      name: formData[6].value,
-      headquarters: formData[7].value,
-      email: formData[8].value,
-      website: formData[9].value,
+      schedule: formData[2].value,
+      salary: formData[3].value,
+      category: formData[4].value,
+      name: formData[5].value,
+      headquarters: formData[6].value,
+      email: formData[7].value,
+      website: formData[8].value,
       preview: true
     }, function(err, result){
       if(!err){

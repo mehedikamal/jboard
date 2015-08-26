@@ -1,6 +1,7 @@
 <template name="condensedJobs">
   <!-- use class active for sponsored listings in future -->
-  <div class="col-lg-12">
+  <div class="container">
+    <div class="col-lg-12">
     <h2><a href="/front_end_jobs">Front End Jobs</a></h2>
     <ul class="list-group">
       {{#each frontEndJobs}}
@@ -11,7 +12,7 @@
         </li>
       </a>
       {{/each}}
-    </ul> 
+    </ul>
     <a href="/front_end_jobs">View All Front End Jobs >></a>
 
     <h2><a href="/back_end_jobs">Back End Jobs</a></h2>
@@ -19,7 +20,7 @@
       {{#each backEndJobs}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
@@ -31,7 +32,7 @@
       {{#each isomorphic}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
@@ -43,7 +44,7 @@
       {{#each miscellaneous}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
@@ -57,7 +58,7 @@
       {{#each design}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
@@ -69,7 +70,7 @@
       {{#each salesMarketing}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
@@ -81,7 +82,7 @@
       {{#each helpDesk}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
@@ -93,11 +94,12 @@
       {{#each systemAdmin}}
       <a href="/{{urlTitle}}/{{_id}}">
         <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} | 
+          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
         </li>
       </a>
       {{/each}}
     </ul>
     <a href="/system_admin_jobs">View All System Admin and DevOps Jobs >></a>
   </div>
+</div>
 </template>

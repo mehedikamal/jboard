@@ -19,7 +19,7 @@
 
     </div>
   </div> -->
-
+<div class="container">
   <div class="row postingWrapper">
     <div class="col-md-9 block-section box-item-details">
         {{# if sponsored}}
@@ -38,7 +38,7 @@
         {{/if}}
 
         <h2 class="title">
-          {{title}} {{testMe.name}}
+          {{title}}
         </h2>
 
         <p>{{name}} | <a href="{{website}}" target="_blank">{{website}}</a></p>
@@ -50,10 +50,20 @@
         </ul>
 
         <div>{{{description}}}</div>
+        {{# if preview}}
 
-        <h3>What we are looking for:</h3>
-        <p>{{{requirements}}}</p>
+        <div class="row">
+          <a class="btn btn-med btn-primary create-posting-link"
+          href="/create-posting"
+          role="button">Edit Posting
+        </a>
+          <a class="btn btn-med btn-primary create-posting-link"
+          href="/create-posting"
+          role="button">Submit Posting
+        </a>
+      </div>
 
+      {{/if}}
     </div>
 
     <!--- Side Bar -->
@@ -64,18 +74,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <p>
-      <a class="btn btn-lg btn-primary create-posting-link"
-      href="/create-posting"
-      role="button">Edit Posting
-    </a>
-      <a class="btn btn-lg btn-primary create-posting-link"
-      href="/create-posting"
-      role="button">Submit Posting
-    </a>
-  </p>
-
-  </div>
+</div>
 
 </template>

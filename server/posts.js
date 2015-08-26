@@ -23,8 +23,8 @@ Meteor.methods({
     })
   },
 
-  createPosting: function(postID){
-      Posts.update(postID, {
+  confirmPosting: function(postID){
+      Posts.update({ '_id' : postID}, {
         $set: { preview: false }
       });
   }

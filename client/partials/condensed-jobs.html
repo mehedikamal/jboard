@@ -3,16 +3,36 @@
   <div class="container">
     <div class="col-lg-12">
     <h2><a href="/front_end_jobs">Front End Jobs</a></h2>
-    <ul class="list-group">
+    <div class="jobGroup">
       {{#each frontEndJobs}}
       <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}}
+        <div class="titleCompany">
+			       <h5>{{title}}</h5>
+				     <p>{{name}}</p>
+			  </div>
 
-        </li>
-      </a>
+        <div class="details">
+			  	<span class="type full-time">
+            <i class="fa fa-clock-o"></i>
+            Full Time
+          </span>
+
+          <span class="sallary">
+            <i class="fa fa-dollar"></i>
+            {{salary}}
+          </span>
+
+          <span class="dateCreated">
+            <i class="fa fa-calendar"></i>
+            {{fmtDate createdAt}}
+          </span>
+
+       </div>
+
+
+     </a>
       {{/each}}
-    </ul>
+    </div>
     <a href="/front_end_jobs">View All Front End Jobs >></a>
 
     <h2><a href="/back_end_jobs">Back End Jobs</a></h2>

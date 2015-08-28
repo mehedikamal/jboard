@@ -1,6 +1,5 @@
 Template.condensedJobs.helpers({
   frontEndJobs: function() {
-    document.title = "Hello World";
     return Posts.find({ category: 'front_end_jobs'}, {sort: {createdAt: -1}})
   },
   backEndJobs: function() {

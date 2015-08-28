@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /lib/
+Disallow: /client/lib/
+Disallow: /client/helpers/
+Disallow: /client/events/
+Disallow: /client/seo.js
+Disallow: /.meteor

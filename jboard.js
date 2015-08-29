@@ -68,7 +68,7 @@ Router.map(function () {
     layoutTemplate: 'main'
   });
 
-  this.route('previewPostEdit', {
+  Router.route('previewPostEdit', {
     path: '/:_id/preview/edit',
     onBeforeAction: function (pause) {
       var post = Posts.findOne({ _id: this.params._id, preview: true });

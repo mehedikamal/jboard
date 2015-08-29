@@ -1,4 +1,6 @@
 @btn-bg: #10C8CD;
+@font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+@spacing: 2em;
 
 .boxShadow(@radius){
   -webkit-border-radius: @radius !important;
@@ -24,9 +26,8 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-family: @font-family;
   padding-top: 20px;
-  padding-bottom: 20px;
   background: #f2f3f6;
 }
 
@@ -161,6 +162,57 @@ label {
     text-shadow: none;
   }
 }
+
+.footer {
+  text-align: center;
+  font-family: @font-family;
+  font-weight: normal;
+  margin: 3em auto 0;
+  text-align: center;
+  padding-bottom: 1em;
+  background: #333;
+  color: #fff;
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .footer-links {
+    margin-bottom: @spacing;
+
+    ul li {
+      padding: 0 .3em;
+    }
+  }
+
+  ul {
+    margin-bottom: @spacing * 1.5;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1.5em;
+    list-style: none;
+    text-align: center;
+    img {
+      background: #222;
+      width: 2.5em;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  li a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+      color: darken(#fff, 5%);
+    }
+  }
+}
+
 
 /* Job Group styling for landing page */
 

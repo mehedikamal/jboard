@@ -3,7 +3,7 @@
     <h2 class="text-center">Creating a job posting is easy!</h2>
     <form class="create-posting-form">
       <label>Job Title</label>
-      <input name="title" type="text" class="form-control" placeholder="Job Title" required /><br>
+      <input name="title" type="text" class="form-control" placeholder="Job Title" required value="{{title}}" /><br>
       <label>Job Description</label>
       <div class="wrapper">
         <div id="toolbar-one">
@@ -35,9 +35,9 @@
 
         </div>
 
-        <div id="editor-one"></div>
+        <div id="editor-one">{{{description}}}</div>
       </div><br> <!--// end text editor -->
-      <input type="hidden" name="description" value="" />
+      <input type="hidden" name="description" value="{{description}}" />
       <label>Schedule</label>
         <select name="schedule" class="form-control">
           <option value="full-time">Full-time</option>
@@ -63,13 +63,13 @@
           <option value="system_admin_jobs">System Admin</option>
         </select><br>
         <label>Company Name</label>
-        <input name="company" type="text" class="form-control" placeholder="Company Name"  required /><br>
+        <input name="company" type="text" class="form-control" placeholder="Company Name"  required value="{{name}}" /><br>
         <label>Company Headquarters</label>
         <input name="headquarters" type="text" class="form-control" placeholder="Company Headquarters"  required /><br>
         <label>Company Email</label>
-        <input name="email" type="email" class="form-control" placeholder="Company Email"  required /><br>
+        <input name="email" type="email" class="form-control" placeholder="Company Email"  value="{{email}}" required /><br>
         <label>Company Website</label>
-        <input name="website" type="text" class="form-control" placeholder="Company Website"  required /><br>
+        <input name="website" type="text" class="form-control" placeholder="Company Website"  value="{{website}}" required /><br>
         <button class="btn btn-primary" type="submit">Post now!</button>
       </form>
       <div class="alert alert-success status-notification" role="alert">

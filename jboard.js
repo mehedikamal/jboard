@@ -70,6 +70,9 @@ Router.map(function () {
 
   Router.route('previewPostEdit', {
     path: '/:_id/preview/edit',
+    waitOn: function () {
+        return Meteor.subscribe('getPosts');
+    },
     onBeforeAction: function (pause) {
       var post = Posts.findOne({ _id: this.params._id, preview: true });
       if (post) {

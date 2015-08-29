@@ -17,18 +17,22 @@ Router.route('/create-posting', function () {
 Router.map(function () {
   this.route('previewPost', {
     path: '/:_id/preview',
+    waitOn: function () {
+        return Meteor.subscribe('getPosts');
+    },
     onBeforeAction: function (pause) {
-      var post = Posts.findOne({ _id: this.params._id, preview: true });
+      
+      var post = Posts.findOne({ _id: this.params._id} ,{preview: true });
+      
       if (post) {
-        this.next();
+          this.next();
       } else {
         this.render('404');
-        return false;
+        
       }
     },
     data: function () {
       var post = Posts.findOne({ _id: this.params._id });
-      console.log(post);
       return post;
     },
     /** Start of Dynamic SEO **/
@@ -43,13 +47,13 @@ Router.map(function () {
       jobData = this.data();
 
       SEO.set({
-        title: 'Job Posting: ' + jobData.title + ' @ noOfficeNeeded.com',
+        title: jobData.title + ' job at ' + jobData.name + ' | noOfficeNeeded.com',
         meta: {
           'description': jobData.description,
           'robots': 'index,nofollow'
         },
         og: {
-          'title': 'Job Posting: ' + jobData.title + ' @ noOfficeNeeded.com',
+          'title': jobData.title + ' job at ' + jobData.name + ' | noOfficeNeeded.com',
           'description': jobData.description
         }
       });

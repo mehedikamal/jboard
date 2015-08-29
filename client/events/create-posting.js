@@ -8,7 +8,13 @@ Template.createPosting.events({
     var formData = $('.create-posting-form').serializeArray(),
         urlTitle = formData[0].value.replace(/\s+/g, '-');
 
-    Meteor.call('createPreview', formData, urlTitle);
+    Meteor.call('createPreview', formData, urlTitle, function(err, result){
+      if(err){
+        console.log(err);
+      }else{
+        console.log(result);
+      }
+    });
 
     if (typeof formData !== undefined) {
       $('.status-notification').fadeIn();

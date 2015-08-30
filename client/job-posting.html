@@ -52,15 +52,19 @@
         <div>{{{description}}}</div>
         {{# if preview}}
 
-        <div class="row">
-          <a class="btn btn-med btn-primary create-posting-link"
+        <div class="row buttonPanel">
+          <div class="col-md-6">
+          <a class="btn center-block btn-med btn-primary create-posting-link"
           href="/create-posting"
           role="button">Edit Posting
         </a>
-          <a class="btn btn-med btn-primary create-posting-link"
+      </div>
+      <div class="col-md-6">
+          <a class="btn center-block btn-med btn-primary create-posting-link"
           href="/create-posting"
           role="button">Submit Posting
         </a>
+      </div>
       </div>
 
       {{/if}}

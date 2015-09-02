@@ -6,7 +6,7 @@
 
 /* Pretty Strings */
 Template.registerHelper('prettyStrings', function(string) {
-  string = string.replace(/_/g, ' ');
+  string = string.replace(/-/g, ' ');
   string = string.replace(/(<([^>]+)>)/ig, "");
   string = string.charAt(0).toUpperCase() + string.substring(1);
 

@@ -31,14 +31,14 @@ Meteor.methods({
     Meteor.subscribe('getPosts')
 
     var categories = [
-      { category: 'front_end_jobs' },
-      { category: 'back_end_jobs' },
-      { category: 'fullstack_jobs' },
-      { category: 'miscellaneous_jobs' },
-      { category: 'design_jobs' },
-      { category: 'sales_marketing_jobs' },
-      { category: 'help_desk_support_jobs' },
-      { category: 'system_admin_jobs' }
+      { category: 'front-end-jobs' },
+      { category: 'back-end-jobs' },
+      { category: 'fullstack-jobs' },
+      { category: 'miscellaneous-jobs' },
+      { category: 'design-jobs' },
+      { category: 'sales-marketing-jobs' },
+      { category: 'help-desk-support-jobs' },
+      { category: 'system-admin-jobs' }
     ]
     var arr = []
     for (var category in categories) {

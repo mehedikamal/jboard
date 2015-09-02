@@ -12,3 +12,20 @@ Template.registerHelper('prettyStrings', function(string) {
 
   return string
 })
+
+/* Category Lookup */
+Template.registerHelper('categoryLookup', function() {
+  if (Session.get('cat') === undefined) {
+    Meteor.call('listByCategory', function(err, res) {
+      Session.set('cat', res)
+    })
+  }
+  return Session.get('cat')
+})
+
+/* Value Checker */
+Template.registerHelper('isEquivalent', function(val1, val2) {
+  if (val1 === val2) {
+    return true;
+  }
+})

@@ -1,0 +1,22 @@
+<template name="singleListing">
+  <a href="/{{urlTitle}}/{{_id}}">
+    <div class="titleCompany">
+      <h5>{{title}}</h5>
+      <p>{{name}}</p>
+    </div>
+
+    <div class="details">
+      <span class="type full-time">
+        <i class="fa fa-clock-o"></i>{{schedule}}
+      </span>
+
+      <span class="sallary">
+        <i class="fa fa-dollar"></i>{{salary}}
+      </span>
+
+      <span class="dateCreated">
+        <i class="fa fa-calendar"></i>{{fmtDate createdAt}}
+      </span>
+    </div>
+  </a>
+</template>

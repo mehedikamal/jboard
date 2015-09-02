@@ -2,124 +2,86 @@
   <!-- use class active for sponsored listings in future -->
   <div class="container">
     <div class="col-lg-12">
-    <h2><a href="/front_end_jobs">Front End Jobs</a></h2>
-    <div class="jobGroup">
-      {{#each frontEndJobs}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <div class="titleCompany">
-			       <h5>{{title}}</h5>
-				     <p>{{name}}</p>
-			  </div>
+      <h2><a href="/front_end_jobs">Front End Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'front_end_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/front_end_jobs" class="view-all-link">View All Front End Jobs >></a>
+      </div> <!-- // end front end jobs -->
 
-        <div class="details">
-			  	<span class="type full-time">
-            <i class="fa fa-clock-o"></i>
-            Full Time
-          </span>
+      <h2><a href="/back_end_jobs">Back End Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'back_end_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/back_end_jobs" class="view-all-link">View All Back End Jobs >></a>
+      </div> <!-- // end back end jobs -->
 
-          <span class="sallary">
-            <i class="fa fa-dollar"></i>
-            {{salary}}
-          </span>
+      <h2><a href="/fullstack_jobs">Fullstack Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'fullstack_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/fullstack_jobs" class="view-all-link">View All Fullstack Jobs >></a>
+      </div> <!-- // end fullstack jobs -->
 
-          <span class="dateCreated">
-            <i class="fa fa-calendar"></i>
-            {{fmtDate createdAt}}
-          </span>
+      <h2><a href="/miscellaneous_jobs">Miscellaneous Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'miscellaneous_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/miscellaneous_jobs" class="view-all-link">View All Miscellaneous Jobs >></a>
+      </div> <!-- // end miscellaneous jobs -->
 
-       </div>
+      <h2><a href="/design_jobs">Design Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'design_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/design_jobs" class="view-all-link">View All Design Jobs >></a>
+      </div> <!-- // end design jobs -->
 
+      <h2><a href="/sales_marketing_jobs">Sales/Marketing Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'sales_marketing_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/sales_marketing_jobs" class="view-all-link">View All Sales/Marketing Jobs >></a>
+      </div> <!-- // end sales/marketing jobs -->
 
-     </a>
-      {{/each}}
-    <a href="/front_end_jobs">View All Front End Jobs >></a>
+      <h2><a href="/help_desk_support_jobs">Help Desk/Support Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'help_desk_support_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/help_desk_support_jobs" class="view-all-link">View All Help Desk/Support Jobs >></a>
+      </div>  <!-- // end help desk & support jobs -->
+
+      <h2><a href="/system_admin_jobs">System Admin Jobs</a></h2>
+      <div class="jobGroup">
+        {{#each getCategories}}
+          {{#if isCategory 'system_admin_jobs'}}
+            {{> singleListing}}
+          {{/if}}
+        {{/each}}
+        <a href="/system_admin_jobs" class="view-all-link">View All System Admin Jobs >></a>
+      </div> <!-- // end system admin jobs -->
+
     </div>
-  
-    <h2><a href="/back_end_jobs">Back End Jobs</a></h2>
-    <ul class="list-group">
-      {{#each backEndJobs}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/back_end_jobs">View All Back End Jobs >></a>
-
-    <h2><a href="/fullstack_jobs">Full Stack Jobs</a></h2>
-    <ul class="list-group">
-      {{#each isomorphic}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/fullstack_jobs">View All Full Stack Jobs >></a>
-
-    <h2><a href="/miscellaneous_jobs">Miscellaneous Jobs</a></h2>
-    <ul class="list-group">
-      {{#each miscellaneous}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/miscellaneous_jobs">View All Miscellaneous Jobs >></a>
   </div>
-
-  <div class="col-lg-12">
-    <h2><a href="/design_jobs">Design Jobs</a></h2>
-    <ul class="list-group">
-      {{#each design}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/design_jobs">View All Design Jobs >></a>
-
-    <h2><a href="/sales_marketing_jobs">Sales and Marketing Jobs</a></h2>
-    <ul class="list-group">
-      {{#each salesMarketing}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/sales_marketing_jobs">View All Sales and Marketing Jobs >></a>
-
-    <h2><a href="/help_desk_support_jobs">Help Desk and Technical Support Jobs</a></h2>
-    <ul class="list-group">
-      {{#each helpDesk}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/help_desk_support_jobs">View All Help Desk and Technical Support Jobs >></a>
-
-    <h2><a href="/system_admin_jobs">System Admin and DevOps Jobs</a></h2>
-    <ul class="list-group">
-      {{#each systemAdmin}}
-      <a href="/{{urlTitle}}/{{_id}}">
-        <li class="list-group-item">
-          <strong>{{name}}</strong> - <u>{{title}}</u> - {{fmtDate createdAt}} |
-        </li>
-      </a>
-      {{/each}}
-    </ul>
-    <a href="/system_admin_jobs">View All System Admin and DevOps Jobs >></a>
-  </div>
-</div>
 </template>

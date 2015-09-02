@@ -22,14 +22,38 @@ Meteor.methods({
       }
     })
   },
-
   confirmPosting: function(postID){
       Posts.update({ '_id' : postID}, {
         $set: { preview: false }
       });
+  },
+  listByCategory: function() {
+    Meteor.subscribe('getPosts')
+
+    var categories = [
+      { category: 'front_end_jobs' },
+      { category: 'back_end_jobs' },
+      { category: 'fullstack_jobs' },
+      { category: 'miscellaneous_jobs' },
+      { category: 'design_jobs' },
+      { category: 'sales_marketing_jobs' },
+      { category: 'help_desk_support_jobs' },
+      { category: 'system_admin_jobs' }
+    ]
+    var arr = []
+    for (var category in categories) {
+      if (categories.hasOwnProperty) {
+        Posts.find(
+          { category: categories[category].category },
+          { sort: { createdAt: -1 }}
+        ).forEach( function(result) {
+          arr.push(result)
+        })
+      }
+    }
+    return arr
   }
 });
-
 
 Meteor.publish('getPosts' , function(){
      var d = new Date().getTime();

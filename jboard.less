@@ -1,6 +1,7 @@
 @btn-bg: #10C8CD;
 @font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 @spacing: 2em;
+@default-link-color: #337ab7;
 
 .boxShadow(@radius){
   -webkit-border-radius: @radius !important;
@@ -59,6 +60,13 @@ li {
 
 label {
   padding: 0 10px 0;
+}
+
+.default-link-color {
+  color: @default-link-color;
+  &:hover {
+    color: darken(@default-link-color, 5%);
+  }
 }
 
 .header {
